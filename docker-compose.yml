@@ -1,0 +1,22 @@
+version: '2.1'
+
+services:
+  static:
+    build: ./static
+    image: btcproof.info/static
+    ports:
+      - 80:80
+    restart: always
+    depends_on:
+      - cert-server
+    networks:
+      - client-server
+  cert-server:
+    build: ./cert-server
+    image: btcproof.info/cert-server
+    restart: always
+    networks:
+      - client-server
+networks:
+  client-server:
+    driver: bridge

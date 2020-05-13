@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Woleet proof verifier</title>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="Check the timestamp and the signatures of a file"/>
+  <meta name="keywords" content="verify,Chainpoint,proof,existence,signature,validity,data,timestamping"/>
+  <meta name="author" content="Woleet SAS"/>
+
+  <script src="node_modules/@babel/polyfill/dist/polyfill.js"></script>
+  <script src="node_modules/@woleet/woleet-weblibs/dist/woleet-weblibs.min.js"></script>
+  <link href="node_modules/@woleet/woleet-widget/dist/style.css" rel="stylesheet">
+  <script src="node_modules/@woleet/woleet-widget/dist/woleet-widget.min.js"></script>
+
+  <!-- Latest compiled and minified Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="css/custom.css" rel="stylesheet">
+
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-74211511-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+<body>
+<div class="page-header">
+  <div class="container">
+      <a href="https://www.woleet.io">
+        <img src="image/logo-woleet.png"/>
+      </a>
+      <h1 style="color: #05b8c0;">
+        Proof verifier<br>
+        <small>Check the timestamp and the signatures of a file</small>
+      </h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="woleet-widget"></div>
+</div>
+<br>
+<div class="container">
+    <div class="alert alert-info" role="alert">
+      If the file was proved publicly using the <a href="https://app.woleet.io">Woleet platform</a>,
+      then you don't need to provide the proof receipt (as it is retrieved live from the Woleet platform).
+      Otherwise, you'll be asked to provide the <a href="https://doc.woleet.io/docs/frequently-asked-questions#section-what-is-a-proof-receipt">proof receipt</a>
+      in the Chainpoint format.
+    </div>
+</div>
+<br>
+<div class="container">
+  <span class="glyphicon glyphicon-circle-arrow-right"></span>
+  verify the <strong>existence</strong> and <strong>get the timestamp</strong> of a file<br>
+  anchored in the Bitcoin blockchain by any Chainpoint compatible tool.
+  <br><br>
+  <span class="glyphicon glyphicon-circle-arrow-right"></span>
+  verify the <strong>existence</strong>, the <strong>validity</strong> and <strong>get the timestamp</strong> of a
+  <strong>signature</strong> of a file<br>
+  anchored in the Bitcoin blockchain by any tool compatible with Woleet's
+  <a href="https://medium.com/@woleet/beyond-data-anchoring-bee867d9be3a" style="color:#4814ad;">signature anchoring</a>
+  extension to Chainpoint</span> (also verify the <strong><a href="/identity" style="color:#4814ad;">signatory identity</a></strong> if provided)
+</div>
+<br><br>
+<div class="container">
+  <div class="col-md-6">
+    <a href="/identity">Identity verification page</a>
+  </div>
+  <div class="col-md-6">
+    <a href="/identity">Build your own verification page</a>
+  </div>
+</div>
+<br>
+
+<footer class="footer">
+  <div class="container">
+    <p class="text-muted" align="center">
+      This tool is gracefully provided to <a href="https://github.com/woleet/btcproof.info" style="color:#4814ad;">the community</a>
+      by <a href="https://woleet.io" style="color:#4814ad;">Woleet</a>
+    </p>
+  </div>
+</footer>
+</body>
+
+</html>
